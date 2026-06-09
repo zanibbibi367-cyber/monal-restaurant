@@ -1,0 +1,96 @@
+@import "tailwindcss";
+
+@theme {
+  /* Premium Gold Accents Palette */
+  --color-gold-50: #fbf8eb;
+  --color-gold-100: #f6efce;
+  --color-gold-200: #eddba0;
+  --color-gold-300: #e0c16b;
+  --color-gold-400: #d4a73f;
+  --color-gold-500: #d4af37; /* Base Metallic Gold */
+  --color-gold-600: #b5922a;
+  --color-gold-700: #8f701e;
+  --color-gold-800: #695015;
+  --color-gold-900: #44320b;
+
+  /* Luxury Dark / Obsidian Palette */
+  --color-dark-50: #f4f4f5;
+  --color-dark-100: #e4e4e7;
+  --color-dark-200: #c2c2c9;
+  --color-dark-300: #8f9099;
+  --color-dark-400: #575961;
+  --color-dark-500: #2b2c30;
+  --color-dark-600: #1e1f22; /* Obsidian secondary */
+  --color-dark-700: #121214; /* Charcoal background */
+  --color-dark-800: #0b0b0c; /* Deepest black background */
+  --color-dark-900: #050505;
+
+  /* Premium Typography */
+  --font-serif: "Playfair Display", Georgia, Cambria, "Times New Roman", Times, serif;
+  --font-sans: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+
+  /* Custom Transitions & Shadow definitions for luxury styling */
+  --animate-gold-shine: gold-shine 2s infinite linear;
+  
+  @keyframes gold-shine {
+    0% { background-position: -200% center; }
+    100% { background-position: 200% center; }
+  }
+}
+
+/* Custom Base Styles */
+html {
+  scroll-behavior: smooth;
+  background-color: var(--color-dark-800);
+  color: var(--color-dark-100);
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-dark-800);
+  overflow-x: hidden;
+}
+
+/* Custom Scrollbar for Luxury Dark Theme */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-dark-800);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-dark-600);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-gold-600);
+}
+
+/* Glassmorphism utility utility classes */
+.glass-panel {
+  background: rgba(30, 31, 34, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(212, 175, 55, 0.15);
+}
+
+.glass-panel-light {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Gold Text Gradient for headings */
+.text-gold-gradient {
+  background: linear-gradient(135deg, #f3e5ab 0%, #d4af37 50%, #b5922a 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.bg-gold-gradient {
+  background: linear-gradient(135deg, #f3e5ab 0%, #d4af37 50%, #b5922a 100%);
+}
